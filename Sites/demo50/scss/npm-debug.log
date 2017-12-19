@@ -1,0 +1,304 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'gulpfile-install' ]
+2 info using npm@4.0.5
+3 info using node@v6.7.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData gulpfile-install
+8 silly fetchNamedPackageData gulpfile-install
+9 silly mapToRegistry name gulpfile-install
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'gulpfile-install',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'gulpfile-install',
+12 silly mapToRegistry   name: 'gulpfile-install',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/gulpfile-install
+14 verbose request uri https://registry.npmjs.org/gulpfile-install
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 3:55:19 PM
+17 verbose request id d8c9133e2f2bf13f
+18 http request GET https://registry.npmjs.org/gulpfile-install
+19 http 200 https://registry.npmjs.org/gulpfile-install
+20 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   server: 'UploadServer',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'last-modified': 'Sat, 17 Jun 2017 19:01:22 GMT',
+20 verbose headers   etag: '"59457c82-184c"',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'content-length': '1301',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Tue, 19 Dec 2017 20:55:19 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '1',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-dca17723-DCA',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '1',
+20 verbose headers   'x-timer': 'S1513716920.992694,VS0,VE0',
+20 verbose headers   vary: 'Accept-Encoding, Accept' }
+21 silly get cb [ 200,
+21 silly get   { 'content-type': 'application/json; charset=UTF-8',
+21 silly get     server: 'UploadServer',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'last-modified': 'Sat, 17 Jun 2017 19:01:22 GMT',
+21 silly get     etag: '"59457c82-184c"',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'content-length': '1301',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Tue, 19 Dec 2017 20:55:19 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '1',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-dca17723-DCA',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '1',
+21 silly get     'x-timer': 'S1513716920.992694,VS0,VE0',
+21 silly get     vary: 'Accept-Encoding, Accept' } ]
+22 verbose get saving gulpfile-install to /Users/akh/.npm/registry.npmjs.org/gulpfile-install/.cache.json
+23 verbose correctMkdir /Users/akh/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule gulpfile-install@0.2.0 checking installable status
+37 silly cache add args [ 'gulpfile-install', null ]
+38 verbose cache add spec gulpfile-install
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'gulpfile-install',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'gulpfile-install',
+39 silly cache add   name: 'gulpfile-install',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed gulpfile-install@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for gulpfile-install
+42 info addNameTag [ 'gulpfile-install', 'latest' ]
+43 silly mapToRegistry name gulpfile-install
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'gulpfile-install',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'gulpfile-install',
+46 silly mapToRegistry   name: 'gulpfile-install',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/gulpfile-install
+48 verbose addNameTag registry:https://registry.npmjs.org/gulpfile-install not in flight; fetching
+49 verbose get https://registry.npmjs.org/gulpfile-install not expired, no request
+50 silly addNameTag next cb for gulpfile-install with tag latest
+51 silly addNamed gulpfile-install@0.2.0
+52 verbose addNamed "0.2.0" is a plain semver version for gulpfile-install
+53 silly mapToRegistry name gulpfile-install
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'gulpfile-install',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'gulpfile-install',
+56 silly mapToRegistry   name: 'gulpfile-install',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/gulpfile-install
+58 verbose addRemoteTarball https://registry.npmjs.org/gulpfile-install/-/gulpfile-install-0.2.0.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulpfile-install/-/gulpfile-install-0.2.0.tgz',
+59 verbose addRemoteTarball   '2359602d9ba438e6920397c32c4dae9c83254e5f' ]
+60 info retry fetch attempt 1 at 3:55:20 PM
+61 info attempt registry request try #1 at 3:55:20 PM
+62 http fetch GET https://registry.npmjs.org/gulpfile-install/-/gulpfile-install-0.2.0.tgz
+63 http fetch 200 https://registry.npmjs.org/gulpfile-install/-/gulpfile-install-0.2.0.tgz
+64 silly fetchAndShaCheck shasum 2359602d9ba438e6920397c32c4dae9c83254e5f
+65 verbose addTmpTarball /var/folders/x7/rydh89h14l77ss3v0tvpqtg80000gn/T/npm-19791-a606b308/registry.npmjs.org/gulpfile-install/-/gulpfile-install-0.2.0.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for gulpfile-install@0.2.0
+67 verbose correctMkdir /Users/akh/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd gulpfile-install@0.2.0
+69 verbose afterAdd /Users/akh/.npm/gulpfile-install/0.2.0/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/akh/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/akh/.npm/gulpfile-install/0.2.0/package/package.json written
+72 silly fetchNamedPackageData commander
+73 silly mapToRegistry name commander
+74 silly mapToRegistry using default registry
+75 silly mapToRegistry registry https://registry.npmjs.org/
+76 silly mapToRegistry data Result {
+76 silly mapToRegistry   raw: 'commander',
+76 silly mapToRegistry   scope: null,
+76 silly mapToRegistry   escapedName: 'commander',
+76 silly mapToRegistry   name: 'commander',
+76 silly mapToRegistry   rawSpec: '',
+76 silly mapToRegistry   spec: 'latest',
+76 silly mapToRegistry   type: 'tag' }
+77 silly mapToRegistry uri https://registry.npmjs.org/commander
+78 verbose request uri https://registry.npmjs.org/commander
+79 verbose request no auth needed
+80 info attempt registry request try #1 at 3:55:20 PM
+81 verbose etag "5a3905ce-13142"
+82 verbose lastModified Tue, 19 Dec 2017 12:27:58 GMT
+83 http request GET https://registry.npmjs.org/commander
+84 http 304 https://registry.npmjs.org/commander
+85 verbose headers { date: 'Tue, 19 Dec 2017 20:55:20 GMT',
+85 verbose headers   via: '1.1 varnish',
+85 verbose headers   'cache-control': 'max-age=300',
+85 verbose headers   etag: '"5a3905ce-13142"',
+85 verbose headers   age: '1576',
+85 verbose headers   connection: 'keep-alive',
+85 verbose headers   'x-served-by': 'cache-dca17723-DCA',
+85 verbose headers   'x-cache': 'HIT',
+85 verbose headers   'x-cache-hits': '66',
+85 verbose headers   'x-timer': 'S1513716920.167252,VS0,VE0',
+85 verbose headers   vary: 'Accept-Encoding, Accept' }
+86 silly get cb [ 304,
+86 silly get   { date: 'Tue, 19 Dec 2017 20:55:20 GMT',
+86 silly get     via: '1.1 varnish',
+86 silly get     'cache-control': 'max-age=300',
+86 silly get     etag: '"5a3905ce-13142"',
+86 silly get     age: '1576',
+86 silly get     connection: 'keep-alive',
+86 silly get     'x-served-by': 'cache-dca17723-DCA',
+86 silly get     'x-cache': 'HIT',
+86 silly get     'x-cache-hits': '66',
+86 silly get     'x-timer': 'S1513716920.167252,VS0,VE0',
+86 silly get     vary: 'Accept-Encoding, Accept' } ]
+87 verbose etag https://registry.npmjs.org/commander from cache
+88 verbose get saving commander to /Users/akh/.npm/registry.npmjs.org/commander/.cache.json
+89 verbose correctMkdir /Users/akh/.npm correctMkdir not in flight; initializing
+90 silly resolveWithNewModule commander@2.12.2 checking installable status
+91 silly cache add args [ 'commander@^2.6.0', null ]
+92 verbose cache add spec commander@^2.6.0
+93 silly cache add parsed spec Result {
+93 silly cache add   raw: 'commander@^2.6.0',
+93 silly cache add   scope: null,
+93 silly cache add   escapedName: 'commander',
+93 silly cache add   name: 'commander',
+93 silly cache add   rawSpec: '^2.6.0',
+93 silly cache add   spec: '>=2.6.0 <3.0.0',
+93 silly cache add   type: 'range' }
+94 silly addNamed commander@>=2.6.0 <3.0.0
+95 verbose addNamed ">=2.6.0 <3.0.0" is a valid semver range for commander
+96 silly addNameRange { name: 'commander', range: '>=2.6.0 <3.0.0', hasData: false }
+97 silly mapToRegistry name commander
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry data Result {
+100 silly mapToRegistry   raw: 'commander',
+100 silly mapToRegistry   scope: null,
+100 silly mapToRegistry   escapedName: 'commander',
+100 silly mapToRegistry   name: 'commander',
+100 silly mapToRegistry   rawSpec: '',
+100 silly mapToRegistry   spec: 'latest',
+100 silly mapToRegistry   type: 'tag' }
+101 silly mapToRegistry uri https://registry.npmjs.org/commander
+102 verbose addNameRange registry:https://registry.npmjs.org/commander not in flight; fetching
+103 verbose get https://registry.npmjs.org/commander not expired, no request
+104 silly addNameRange number 2 { name: 'commander', range: '>=2.6.0 <3.0.0', hasData: true }
+105 silly addNameRange versions [ 'commander',
+105 silly addNameRange   [ '0.0.1',
+105 silly addNameRange     '0.0.3',
+105 silly addNameRange     '0.0.4',
+105 silly addNameRange     '0.0.5',
+105 silly addNameRange     '0.1.0',
+105 silly addNameRange     '0.2.0',
+105 silly addNameRange     '0.2.1',
+105 silly addNameRange     '0.3.0',
+105 silly addNameRange     '0.3.1',
+105 silly addNameRange     '0.3.2',
+105 silly addNameRange     '0.3.3',
+105 silly addNameRange     '0.4.0',
+105 silly addNameRange     '0.4.1',
+105 silly addNameRange     '0.4.2',
+105 silly addNameRange     '0.4.3',
+105 silly addNameRange     '0.5.0',
+105 silly addNameRange     '0.5.1',
+105 silly addNameRange     '0.6.0',
+105 silly addNameRange     '0.6.1',
+105 silly addNameRange     '0.5.2',
+105 silly addNameRange     '1.0.0',
+105 silly addNameRange     '1.0.1',
+105 silly addNameRange     '1.0.2',
+105 silly addNameRange     '1.0.3',
+105 silly addNameRange     '1.0.4',
+105 silly addNameRange     '1.0.5',
+105 silly addNameRange     '1.1.0',
+105 silly addNameRange     '1.1.1',
+105 silly addNameRange     '1.2.0',
+105 silly addNameRange     '1.3.0',
+105 silly addNameRange     '1.3.1',
+105 silly addNameRange     '1.3.2',
+105 silly addNameRange     '2.0.0',
+105 silly addNameRange     '2.1.0',
+105 silly addNameRange     '2.2.0',
+105 silly addNameRange     '2.3.0',
+105 silly addNameRange     '2.4.0',
+105 silly addNameRange     '2.5.0',
+105 silly addNameRange     '2.5.1',
+105 silly addNameRange     '2.6.0',
+105 silly addNameRange     '2.7.0',
+105 silly addNameRange     '2.7.1',
+105 silly addNameRange     '2.8.0',
+105 silly addNameRange     '2.8.1',
+105 silly addNameRange     '2.9.0',
+105 silly addNameRange     '2.10.0',
+105 silly addNameRange     '2.11.0',
+105 silly addNameRange     '2.12.0',
+105 silly addNameRange     '2.12.1',
+105 silly addNameRange     '2.12.2' ] ]
+106 silly addNamed commander@2.12.2
+107 verbose addNamed "2.12.2" is a plain semver version for commander
+108 silly cache afterAdd commander@2.12.2
+109 verbose afterAdd /Users/akh/.npm/commander/2.12.2/package/package.json not in flight; writing
+110 verbose correctMkdir /Users/akh/.npm correctMkdir not in flight; initializing
+111 verbose afterAdd /Users/akh/.npm/commander/2.12.2/package/package.json written
+112 silly loadAllDepsIntoIdealTree Finishing
+113 silly loadIdealTree Finishing
+114 silly currentTree lib
+115 silly idealTree lib
+115 silly idealTree └─┬ gulpfile-install@0.2.0
+115 silly idealTree   └── commander@2.12.2
+116 silly generateActionsToTake Starting
+117 silly install generateActionsToTake
+118 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+119 silly rollbackFailedOptional Starting
+120 silly rollbackFailedOptional Finishing
+121 silly runTopLevelLifecycles Finishing
+122 silly install printInstalled
+123 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+123 verbose stack     at Error (native)
+124 verbose cwd /Users/akh/Desktop/CCC50/Sites/demo50/scss
+125 error Darwin 16.7.0
+126 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "gulpfile-install"
+127 error node v6.7.0
+128 error npm  v4.0.5
+129 error path /usr/local/lib/node_modules
+130 error code EACCES
+131 error errno -13
+132 error syscall access
+133 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+133 error     at Error (native)
+133 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+133 error     at Error (native)
+133 error   errno: -13,
+133 error   code: 'EACCES',
+133 error   syscall: 'access',
+133 error   path: '/usr/local/lib/node_modules' }
+134 error Please try running this command again as root/Administrator.
+135 verbose exit [ -13, true ]
