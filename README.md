@@ -3,7 +3,7 @@
 This is the project folder for the development of the 50th Anniversary interactive web page for the [Community Change](https://communitychange.org).  
 
 
-### [Moodboard](TIMELINE/moodboard/)  
+### [Moodboard](TIMELINE/moodboard/moodboard-1.pdf)  
 ### Decades   
   + [1960s](TIMELINE/1960/)    
   + [1970s](TIMELINE/1970/)    
