@@ -22,9 +22,12 @@ Preview the web version of the time line [here](https://marvelapp.com/7hc9aa4).
     + 360 scenes  
     + audio post  
  
-### Typography
+### Typography  
 
-## Typeface  
+We are using the [Perfect Fifth Scale](http://type-scale.com/?size=16&scale=1.500&text=Center%20for%20Community%20Change&webfont=Libre+Baskerville&font-family=Helvetica%20&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=) for fonts treatment and heading.  
+
+
+#### Typeface  
 #### Body text - Helvetica Neue Bold    
 #### Main Headings - AUdimat Regular   
   + "The capitals in this lovely font are very utilitarian, but the lower case and italics show a good deal more whimsy. Check the backwards-3 styled italic capital E."   
