@@ -1,0 +1,114 @@
+.txt-year {
+	// transform: rotate(90deg);
+}
+
+// 1960
+#decade-60{
+	// background-image: url('https://s13.postimg.org/ilil29eon/rkf-img-chavez_copy.jpg');
+	background-image: url('https://s13.postimg.org/pq0ebjeav/rkf-img-chavez-gradiant.jpg');
+	background-size: cover;
+
+	.col-sm-4, .col-xs-6, .col-sm-8 {
+		padding: 0;
+	}
+
+	.decade-box {
+		width: 620px;
+	}
+}
+
+// 1970
+#decade-70{
+	// background-image: url('https://s13.postimg.org/ilil29eon/rkf-img-chavez_copy.jpg');
+	background-image: url('https://s13.postimg.org/ynppmg8xj/decade-90.jpg');
+	background-size: cover;
+
+	.col-sm-4, .col-xs-6, .col-sm-8 {
+		padding: 0;
+	}
+
+	.decade-left-panel {
+		.decade-box {
+			height: 100px;
+			width: 620px;
+			margin-left: -95px;
+			background: $ccc-black;
+			h2 {
+				color: white;
+				text-align: right;
+			}
+		}
+	}
+}
+
+#decade-80 {
+	background-image: url('https://s13.postimg.org/6q5hp8ec7/decade-80.png');
+	background-size: cover;
+
+	.col-sm-4, .col-xs-6, .col-sm-8 {
+		padding: 0;
+	}
+
+	.decade-box {
+		width: 620px;
+	}
+}
+
+// 1990
+#decade-90{
+	// background-image: url('https://s13.postimg.org/ilil29eon/rkf-img-chavez_copy.jpg');
+	background-image: url('https://s13.postimg.org/8zy7dnkcn/decade-1990.jpg');
+	background-size: cover;
+
+	.col-sm-4, .col-xs-6, .col-sm-8 {
+		padding: 0;
+	}
+
+	.decade-left-panel {
+		.decade-box {
+			height: 100px;
+			width: 620px;
+			margin-left: -95px;
+			background: $ccc-black;
+			h2 {
+				color: white;
+				text-align: right;
+			}
+		}
+	}
+
+	.right-panel-text-box {
+		background: rgba(255,255,255, 0.5);
+		padding: 1.25rem 0 1.25rem 1.5rem;
+	}
+}
+
+.tilecaption{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); 
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Segoe UI;
+    font-weight: lighter;
+}
+
+
+.decade-box {
+	height: 100px;
+	background: rgba(255,221,15,0.9);
+	width: 100%;
+
+	h2 {
+		font-size: 3rem;
+		padding: 3rem 1.25rem 0;
+	}
+}
+
+.right-panel-text-box {
+	background: rgba(255,255,255, 0.45);
+	padding: 1.25rem 0 1.25rem 1.5rem;
+}
