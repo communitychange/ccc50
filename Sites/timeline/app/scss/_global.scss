@@ -87,3 +87,21 @@ h6 {
     font-weight: 800;
   }
 }
+
+// Icons
+
+.fa-angle-down:before {
+    content: "\f107";
+    font-size: 54px;
+    color: white;
+    display: inline-block;
+    -webkit-transform: scale(2,1);
+    -moz-transform: scale(2,1);
+    -ms-transform: scale(2,1);
+    -o-transform: scale(2,1);
+    transform: scale(1.5,1);
+}
+
+.txt:hover {
+    text-decoration: none;
+}

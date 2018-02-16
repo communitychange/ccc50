@@ -2,4 +2,4 @@ resources/*
 .DS_Store  
 Sites/demo50/node_modules/*
 
-
+Sites/timeline/node_modules/*

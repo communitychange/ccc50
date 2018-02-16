@@ -60,6 +60,20 @@ h6 {
   .scroll-to-top i {
     font-weight: 800; }
 
+.fa-angle-down:before {
+  content: "\f107";
+  font-size: 54px;
+  color: white;
+  display: inline-block;
+  -webkit-transform: scale(2, 1);
+  -moz-transform: scale(2, 1);
+  -ms-transform: scale(2, 1);
+  -o-transform: scale(2, 1);
+  transform: scale(1.5, 1); }
+
+.txt:hover {
+  text-decoration: none; }
+
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -131,6 +145,24 @@ h6 {
 #tile10 {
   background: #003b71; }
 
+.decade-box {
+  height: 100px;
+  background: rgba(255, 221, 15, 0.9);
+  width: 100%; }
+  .decade-box h2 {
+    font-size: 3rem;
+    padding: 3rem 1.25rem 0;
+    color: white; }
+
+.right-panel-text-box {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1.25rem 0 1.25rem 1.5rem; }
+  .right-panel-text-box p {
+    color: #fff;
+    text-decoration: none; }
+  .right-panel-text-box p:hover {
+    text-decoration: none; }
+
 #decade-60 {
   background-image: url("https://s13.postimg.org/h5gpv7s47/decade-1960-v2.png");
   background-size: cover; }
@@ -138,6 +170,11 @@ h6 {
     padding: 0; }
   #decade-60 .decade-box {
     width: 620px; }
+    #decade-60 .decade-box .right-panel-text-box {
+      background: rgba(255, 255, 255, 0.75);
+      padding: 1.25rem 0 1.25rem 1.5rem; }
+      #decade-60 .decade-box .right-panel-text-box p {
+        color: #fff; }
 
 #decade-70 {
   background-image: url("https://s13.postimg.org/uz52k22nb/decade-1970-v2.png");
@@ -202,30 +239,6 @@ h6 {
   #decade-2010 .right-panel-text-box {
     background: rgba(255, 255, 255, 0.5);
     padding: 1.25rem 0 1.25rem 1.5rem; }
-
-.tilecaption {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  margin: 0 !important;
-  text-align: center;
-  color: white;
-  font-family: Segoe UI;
-  font-weight: lighter; }
-
-.decade-box {
-  height: 100px;
-  background: rgba(255, 221, 15, 0.9);
-  width: 100%; }
-  .decade-box h2 {
-    font-size: 3rem;
-    padding: 3rem 1.25rem 0; }
-
-.right-panel-text-box {
-  background: rgba(255, 255, 255, 0.45);
-  padding: 1.25rem 0 1.25rem 1.5rem; }
 
 /* Side Menu */
 #sidebar-wrapper {
@@ -378,6 +391,14 @@ h6 {
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem); } }
 
+#join-us {
+  background-image: url("https://s13.postimg.org/jt665dq8n/staff-v2.png");
+  background-size: cover; }
+  #join-us .service-icon {
+    background: rgba(255, 255, 255, 0.85); }
+  #join-us .service-icon:hover {
+    background: #ffdd0f; }
+
 footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -388,12 +409,14 @@ footer.footer {
     width: 4rem;
     line-height: 4.3rem;
     font-size: 1.5rem;
-    background-color: #003b71;
+    background-color: #fff;
     transition: background-color 0.15s ease-in-out;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
     footer.footer .social-link:hover {
-      background-color: #00203e;
+      background-color: #ffdd0f;
       text-decoration: none; }
+  footer.footer .text-color {
+    color: #003b71; }
 
 a {
   color: #003b71; }

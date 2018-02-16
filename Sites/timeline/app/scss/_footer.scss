@@ -1,3 +1,15 @@
+#join-us {
+  background-image: url('https://s13.postimg.org/jt665dq8n/staff-v2.png');
+  background-size: cover;
+
+  .service-icon {
+      background: rgba(255,255,255,0.85);
+  }
+  .service-icon:hover {
+      background: $ccc-yellow;
+  }
+}
+
 footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -8,12 +20,16 @@ footer.footer {
     width: 4rem;
     line-height: 4.3rem;
     font-size: 1.5rem;
-    background-color: $primary;
+    background-color: $white;
     transition: background-color 0.15s ease-in-out;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
     &:hover {
-      background-color: darken($primary, 10%);
+      background-color: $ccc-yellow;
       text-decoration: none;
     }
+  }
+
+  .text-color {
+    color: $primary;
   }
 }

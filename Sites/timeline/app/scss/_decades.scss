@@ -1,5 +1,26 @@
-.txt-year {
-	// transform: rotate(90deg);
+.decade-box {
+	height: 100px;
+	background: rgba(255,221,15,0.9);
+	width: 100%;
+
+	h2 {
+		font-size: 3rem;
+		padding: 3rem 1.25rem 0;
+		color: white;
+	}
+
+}
+
+.right-panel-text-box {
+	background: rgba(255,255,255, 0.75);
+	padding: 1.25rem 0 1.25rem 1.5rem;
+	p { 
+		color: $white;
+		text-decoration: none;
+	}
+	p:hover {
+		text-decoration: none;
+	}
 }
 
 // 1960
@@ -15,6 +36,13 @@
 
 	.decade-box {
 		width: 620px;
+		.right-panel-text-box {
+		    background: rgba(255, 255, 255, 0.75);
+		    padding: 1.25rem 0 1.25rem 1.5rem;
+		    p { 
+		    	color: $white;
+		    }
+		}
 	}
 }
 
@@ -124,32 +152,17 @@
 	}
 }
 
-.tilecaption{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%); 
-    margin:0!important;
-    text-align: center;
-    color:white;
-    font-family: Segoe UI;
-    font-weight: lighter;
-}
+// .tilecaption{
+//     position: relative;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     -webkit-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%); 
+//     margin:0!important;
+//     text-align: center;
+//     color:white;
+//     font-family: Segoe UI;
+//     font-weight: lighter;
+// }
 
 
-.decade-box {
-	height: 100px;
-	background: rgba(255,221,15,0.9);
-	width: 100%;
-
-	h2 {
-		font-size: 3rem;
-		padding: 3rem 1.25rem 0;
-	}
-}
-
-.right-panel-text-box {
-	background: rgba(255,255,255, 0.45);
-	padding: 1.25rem 0 1.25rem 1.5rem;
-}
