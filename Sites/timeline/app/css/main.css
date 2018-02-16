@@ -132,7 +132,7 @@ h6 {
   background: #003b71; }
 
 #decade-60 {
-  background-image: url("https://s13.postimg.org/pq0ebjeav/rkf-img-chavez-gradiant.jpg");
+  background-image: url("https://s13.postimg.org/h5gpv7s47/decade-1960-v2.png");
   background-size: cover; }
   #decade-60 .col-sm-4, #decade-60 .col-xs-6, #decade-60 .col-sm-8 {
     padding: 0; }
@@ -140,7 +140,7 @@ h6 {
     width: 620px; }
 
 #decade-70 {
-  background-image: url("https://s13.postimg.org/ynppmg8xj/decade-90.jpg");
+  background-image: url("https://s13.postimg.org/uz52k22nb/decade-1970-v2.png");
   background-size: cover; }
   #decade-70 .col-sm-4, #decade-70 .col-xs-6, #decade-70 .col-sm-8 {
     padding: 0; }
@@ -154,7 +154,7 @@ h6 {
       text-align: right; }
 
 #decade-80 {
-  background-image: url("https://s13.postimg.org/6q5hp8ec7/decade-80.png");
+  background-image: url("https://s13.postimg.org/ij8cqirdj/decade-1980-reagan.png");
   background-size: cover; }
   #decade-80 .col-sm-4, #decade-80 .col-xs-6, #decade-80 .col-sm-8 {
     padding: 0; }
@@ -162,7 +162,7 @@ h6 {
     width: 620px; }
 
 #decade-90 {
-  background-image: url("https://s13.postimg.org/8zy7dnkcn/decade-1990.jpg");
+  background-image: url("https://s13.postimg.org/eqouacwbb/decade-1990-v2.png");
   background-size: cover; }
   #decade-90 .col-sm-4, #decade-90 .col-xs-6, #decade-90 .col-sm-8 {
     padding: 0; }
@@ -175,6 +175,31 @@ h6 {
       color: white;
       text-align: right; }
   #decade-90 .right-panel-text-box {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.25rem 0 1.25rem 1.5rem; }
+
+#decade-2000 {
+  background-image: url("https://s13.postimg.org/8zy7dnkcn/decade-1990.jpg");
+  background-size: cover; }
+  #decade-2000 .col-sm-4, #decade-2000 .col-xs-6, #decade-2000 .col-sm-8 {
+    padding: 0; }
+  #decade-2000 .decade-box {
+    width: 620px; }
+
+#decade-2010 {
+  background-image: url("https://s13.postimg.org/knspr8y1j/decade-2010-immigration.png");
+  background-size: cover; }
+  #decade-2010 .col-sm-4, #decade-2010 .col-xs-6, #decade-2010 .col-sm-8 {
+    padding: 0; }
+  #decade-2010 .decade-left-panel .decade-box {
+    height: 100px;
+    width: 620px;
+    margin-left: -95px;
+    background: #231f20; }
+    #decade-2010 .decade-left-panel .decade-box h2 {
+      color: white;
+      text-align: right; }
+  #decade-2010 .right-panel-text-box {
     background: rgba(255, 255, 255, 0.5);
     padding: 1.25rem 0 1.25rem 1.5rem; }
 
@@ -215,7 +240,7 @@ h6 {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(224, 124, 0, 0.2);
   background: rgba(255, 255, 255, 0.9); }
 
 .sidebar-nav {
