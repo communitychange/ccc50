@@ -39,6 +39,10 @@ h6 {
   font-weight: 700;
 }
 
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover {
+  text-decoration: none;
+}
+
 .text-faded {
   color: fade-out($white, 0.3);
 }
