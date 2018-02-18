@@ -37,6 +37,24 @@ We are using the [Perfect Fifth Scale](http://type-scale.com/?size=16&scale=1.50
 | heading 4  | 1.5em    | 24px        |               | 1.2em, 19.2px  |
 | small text | 0.667em  | 10.67px     |               | 1.45em, 23.2px |
 
+
+### On Mobile
+
+Please make sure text follow to scale for mobile devices.  Based on this guide below  
+
+| element    | em scale   | pixel scale | margin-bottom | line-height    |
+|------------|------------|-------------|---------------|----------------|
+| paragraph  | 0.75em     | 16px        | 1.15em        | 1.25em         |
+| heading 1  | 3.79725em  |             |               | 1.2em, 19.2px  |
+| heading 2  | 2.53125em  |             |               | 1.2em, 19.2px  |
+| heading 3  | 1.6875     |       	    |               | 1.2em, 19.2px  |
+| heading 4  | 1.125em    |        	    |               | 1.2em, 19.2px  |
+| small text | 0.650em    |             |               | 1.45em, 23.2px |
+
+
+```
+
+
 ### Typeface  
 #### Body text - Helvetica Neue Bold    
 #### Main Headings - AUdimat Regular   
@@ -45,6 +63,9 @@ We are using the [Perfect Fifth Scale](http://type-scale.com/?size=16&scale=1.50
 
 ### Resource  
 Fonts:  http://www.patrickstjohn.org/blog/10-best-free-fonts-protest-posters    
+Responsive Typography Scale: http://typecast.com/blog/a-more-modern-scale-for-web-typography  
+
+
 
 
   
