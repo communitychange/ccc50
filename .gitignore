@@ -1,5 +1,7 @@
 resources/* 
 .DS_Store  
-Sites/demo50/node_modules/*
+sandbox/html-timeline/node_modules/*
+./paperwork/*  
+/1_designers/.sketch/*
 
-Sites/timeline/node_modules/*
+
