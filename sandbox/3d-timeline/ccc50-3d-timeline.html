@@ -25,7 +25,7 @@
 				width: 100%;
 				color: #ffffff;
 				padding: 5px;
-				font-family: Monospace;
+				font-family: "Helvetica", sans-serif;
 				font-size: 13px;
 				font-weight: bold;
 				text-align: center;
@@ -55,34 +55,40 @@
 				border: 1px solid rgba(127,255,255,0.75);
 			}
 
-				.element .number {
-					position: absolute;
-					top: 20px;
-					right: 20px;
-					font-size: 12px;
-					color: rgba(127,255,255,0.75);
-				}
+			.element .number {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				font-size: 12px;
+				color: rgba(127,255,255,0.75);
+				display: none;
+			}
 
-				.element .symbol {
-					position: absolute;
-					top: 40px;
-					left: 0px;
-					right: 0px;
-					font-size: 45px;
-					font-weight: bold;
-					color: rgba(255,255,255,0.75);
-					text-shadow: 0 0 10px rgba(0,255,255,0.95);
-				}
+			.element .symbol {
+				position: absolute;
+				top: 5px;
+			    left: 0px;
+			    right: 0px;
+			    font-size: 40px;
+				font-weight: bold;
+				color: rgba(255,255,255,0.75);
+				text-shadow: 0 0 10px rgba(0,255,255,0.95);
+			}
 
-				.element .details {
-					position: absolute;
-					bottom: 15px;
-					left: 0px;
-					right: 0px;
-					font-size: 12px;
-					color: rgba(127,255,255,0.75);
-					/*color: rgba(241, 103, 36, 0.75);*/
-				}
+			.element .details {
+				position: absolute;
+				bottom: 10px;
+				left: 0px;
+				right: 0px;
+				font-size: 10px;
+				color: rgba(127,255,255,0.85);
+				/*color: rgba(241, 103, 36, 0.75);*/
+			}
+
+			span.details-post-category {
+			    color: rgba(255,255,255,0.8);
+			    text-transform: uppercase;
+			}
 
 			button {
 				color: rgba(127,255,255,0.75);
@@ -99,6 +105,19 @@
 				color: #000000;
 				background-color: rgba(0,255,255,0.75);
 			}
+
+			.rotate {
+				/* Safari */
+				-webkit-transform: rotate(90deg);
+				/* Firefox */
+				-moz-transform: rotate(90deg);
+				/* IE */
+				-ms-transform: rotate(90deg);
+				/* Opera */
+				-o-transform: rotate(90deg);
+				float: right;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -108,12 +127,15 @@
 		<script src="js/renderers/CSS3DRenderer.js"></script>
 
 		<div id="container"></div>
-		<div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">Interactive Timeline </a> view all decades here <a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank" rel="noopener">by AKH</a>.</div>
 		<div id="menu">
 			<button id="table">TABLE</button>
 			<button id="sphere">SPHERE</b19utton>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
+		</div>
+		<div id="info">
+			<a href="http://threejs.org" target="_blank" rel="noopener">Interactive Timeline </a> view all decades here 
+			<a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank" rel="noopener">by AKH</a>.
 		</div>
 
 		<script>
@@ -126,118 +148,185 @@
 				"1964", "Harlem Riots", "race", 5, 2,
 				"1964", "Civil Rights Act", "policy", 6, 2,
 				"1965", "Voting Rights Act passed", "policy", 7, 2,
-				"1965", "Housing and Urban Development Act passed", "policy", 7, 2,
-				"1965", "Citizens’ Crusade Against Poverty", "ccc", 8, 2,
-				"1965", "Watts riots", "race", 9, 2,
-				"1966", "Community Development Corporations (CDCs) devised", "ccc", 10, 2,
-				"1967", "Kerner Commission", "race", 11, 2,
-				"1968", "Martin Luther King Jr. assassinated", "race", 12, 2,
-				"1968", "Senator Robert Kennedy assassinated", "electoral", 13, 2,
-				"1968", "DNC protest in Chicago", "30.973762", 14, 2,
-				"1968", "RFK Memorial Foundation starts CCC", "ccc", 15, 2,
-				"1968", "President Richard Nixon elected", "electoral", 16, 2,
+				"1965", "Housing and Urban Development Act passed", "policy", 8, 2,
+				"1965", "Citizens’ Crusade Against Poverty", "ccc", 9, 2,
+				"1965", "Watts riots", "race", 10, 2,
+				"1966", "Community Development Corporations (CDCs) devised", "ccc", 11, 2,
+				"1967", "Kerner Commission", "race", 12, 2,
+				"1968", "Martin Luther King Jr. assassinated", "race", 13, 2,
+				"1968", "Senator Robert Kennedy assassinated", "electoral", 14, 2,
+				"1968", "DNC protest in Chicago", "30.973762", 15, 2,
+				"1968", "RFK Memorial Foundation starts CCC", "ccc", 16, 2,
+				"1968", "President Richard Nixon elected", "electoral", 17, 2,
 				"1968", "Published: Hunger USA", "ccc", 18, 2,
-				"1968", "American Indian Movement begins", "race", 19, 2,
-				"1969", "Apollo 11 lands on the moon", "culture", 20, 2,
-				"1970", "Agribusiness Accountability Project started", "ccc", 3, 3,
-				"Ti", "Titanium", "47.867", 4, 3,
-				"V", "Vanadium", "50.9415", 5, 4,
-				"Cr", "Chromium", "51.9961", 6, 4,
-				"Mn", "Manganese", "54.938045", 7, 4,
-				"Fe", "Iron", "55.845", 8, 4,
-				"Co", "Cobalt", "58.933195", 9, 4,
-				"Ni", "Nickel", "58.6934", 10, 4,
-				"Cu", "Copper", "63.546", 11, 4,
-				"Zn", "Zinc", "65.38", 12, 4,
-				"Ga", "Gallium", "69.723", 13, 4,
-				"Ge", "Germanium", "72.63", 14, 4,
-				"As", "Arsenic", "74.9216", 15, 4,
-				"Se", "Selenium", "78.96", 16, 4,
-				"Br", "Bromine", "79.904", 17, 4,
-				"Kr", "Krypton", "83.798", 18, 4,
-				"Rb", "Rubidium", "85.4678", 1, 5,
-				"Sr", "Strontium", "87.62", 2, 5,
-				"Y", "Yttrium", "88.90585", 3, 5,
-				"Zr", "Zirconium", "91.224", 4, 5,
-				"Nb", "Niobium", "92.90628", 5, 5,
-				"Mo", "Molybdenum", "95.96", 6, 5,
-				"Tc", "Technetium", "(98)", 7, 5,
-				"Ru", "Ruthenium", "101.07", 8, 5,
-				"Rh", "Rhodium", "102.9055", 9, 5,
-				"Pd", "Palladium", "106.42", 10, 5,
-				"Ag", "Silver", "107.8682", 11, 5,
-				"Cd", "Cadmium", "112.411", 12, 5,
-				"In", "Indium", "114.818", 13, 5,
-				"Sn", "Tin", "118.71", 14, 5,
-				"Sb", "Antimony", "121.76", 15, 5,
-				"Te", "Tellurium", "127.6", 16, 5,
-				"I", "Iodine", "126.90447", 17, 5,
-				"Xe", "Xenon", "131.293", 18, 5,
-				"Cs", "Caesium", "132.9054", 1, 6,
-				"Ba", "Barium", "132.9054", 2, 6,
-				"La", "Lanthanum", "138.90547", 3, 9,
-				"Ce", "Cerium", "140.116", 4, 9,
-				"Pr", "Praseodymium", "140.90765", 5, 9,
-				"Nd", "Neodymium", "144.242", 6, 9,
-				"Pm", "Promethium", "(145)", 7, 9,
-				"Sm", "Samarium", "150.36", 8, 9,
-				"Eu", "Europium", "151.964", 9, 9,
-				"Eu", "Europium", "151.964", 10, 9,
-				"Gd", "Gadolinium", "157.25", 11, 9,
-				"Tb", "Terbium", "158.92535", 12, 9,
-				"Dy", "Dysprosium", "162.5", 13, 9,
-				"Ho", "Holmium", "164.93032", 14, 9,
-				"Er", "Erbium", "167.259", 15, 9,
-				"Tm", "Thulium", "168.93421", 16, 9,
-				"Yb", "Ytterbium", "173.054", 17, 9,
-				"Lu", "Lutetium", "174.9668", 18, 9,
-				"Hf", "Hafnium", "178.49", 1, 6,
-				"Ta", "Tantalum", "180.94788", 2, 6,
-				"W", "Tungsten", "183.84", 6, 6,
-				"Re", "Rhenium", "186.207", 7, 6,
-				"Os", "Osmium", "190.23", 8, 6,
-				"Ir", "Iridium", "192.217", 9, 6,
-				"Pt", "Platinum", "195.084", 10, 6,
-				"Au", "Gold", "196.966569", 11, 6,
-				"Hg", "Mercury", "200.59", 12, 6,
-				"Tl", "Thallium", "204.3833", 13, 6,
-				"Pb", "Lead", "207.2", 14, 6,
-				"Bi", "Bismuth", "208.9804", 15, 6,
-				"Po", "Polonium", "(209)", 16, 6,
-				"At", "Astatine", "(210)", 17, 6,
-				"Rn", "Radon", "(222)", 18, 6,
-				"Fr", "Francium", "(223)", 1, 7,
-				"Ra", "Radium", "(226)", 2, 7,
-				"Ac", "Actinium", "(227)", 4, 10,
-				"Th", "Thorium", "232.03806", 5, 10,
-				"Pa", "Protactinium", "231.0588", 6, 10,
-				"U", "Uranium", "238.02891", 7, 10,
-				"Np", "Neptunium", "(237)", 8, 10,
-				"Pu", "Plutonium", "(244)", 9, 10,
-				"Am", "Americium", "(243)", 10, 10,
-				"Cm", "Curium", "(247)", 11, 10,
-				"Bk", "Berkelium", "(247)", 12, 10,
-				"Cf", "Californium", "(251)", 13, 10,
-				"Es", "Einstenium", "(252)", 14, 10,
-				"Fm", "Fermium", "(257)", 15, 10,
-				"Md", "Mendelevium", "(258)", 16, 10,
-				"No", "Nobelium", "(259)", 17, 10,
-				"Lr", "Lawrencium", "(262)", 18, 10,
-				"Rf", "Rutherfordium", "(267)", 4, 7,
-				"Db", "Dubnium", "(268)", 5, 7,
-				"Sg", "Seaborgium", "(271)", 6, 7,
-				"Bh", "Bohrium", "(272)", 7, 7,
-				"Hs", "Hassium", "(270)", 8, 7,
-				"Mt", "Meitnerium", "(276)", 9, 7,
-				"Ds", "Darmstadium", "(281)", 10, 7,
-				"Rg", "Roentgenium", "(280)", 11, 7,
-				"Cn", "Copernicium", "(285)", 12, 7,
-				"Nh", "Nihonium", "(286)", 13, 7,
-				"Fl", "Flerovium", "(289)", 14, 7,
-				"Mc", "Moscovium", "(290)", 15, 7,
-				"Lv", "Livermorium", "(293)", 16, 7,
-				"Ts", "Tennessine", "(294)", 17, 7,
-				"Og", "Oganesson", "(294)", 18, 7
+				"1968", "American Indian Movement begins", "race", 1, 3,
+				"1969", "Apollo 11 lands on the moon", "culture", 2, 3,
+				"1970", "CCC started and housed the Agribusiness Accountability Project", "ccc", 3, 3,
+				"1971", "CCC helps community organizations raise more than $3 million", "ccc", 4, 3,
+				"1971", "Co-authored: National Survey of Housing Abandonment", "ccc", 5, 3,
+				"1972", "Number of community groups assisted by CCC grows from 6 in 1968 to 21", "ccc", 6, 3,
+				"1972", "Watergate investigation begins", "politics", 7, 3,
+				"1972", "President Richard Nixon wins re-election", "electoral", 8, 3,
+				"1972", "CCC supports first national conference on housing and finance", "ccc", 9, 3,
+				"1972", "CCC sponsors Voting Rights Litigation Project", "ccc", 10, 3,
+				"1973", "2nd Nixon administration issues severe funding cuts to social and anti-poverty programs", "policy", 11, 3,
+				"1973", "CCC collaborates on National Revenue Sharing Project", "ccc", 12, 3,
+				"1973", "Roe v. Wade Supreme Court ruling overturns state laws against abortion", "policy", 13, 3,
+				"1974", "CCC organizes The Citizen’s Energy Conference", "ccc", 14, 3,
+				"1974", "Gerald Ford becomes President following Nixon resignation", "ccc", 15, 3,
+				"1975", "End of Vietnam War", "world", 16, 3,
+				"1975", "Community Development Block Grant Program created", "ccc", 17, 3,
+				"1975", "Pablo Eisenberg becomes president of CCC", "ccc", 18, 3,
+				"1976", "Publication: General Revenue Sharing: Influencing Local Budgets", "ccc", 1, 4,
+				"1976", "President Jimmy Carter elected", "electoral", 2, 4,
+				"1976", "launches Neighborhood Revitalization Project ", "ccc", 3, 4,
+				"1976", "CCC convenes Working Group for Community Development Forum", "ccc", 4, 4,
+				"1976", "CCC founded the National Committee for Responsive Philanthropy founded", "ccc", 5, 4,
+				"1977", "Community Reinvestment Act (CRA) passed", "policy", 6, 5,
+				"1977", "CCC creates National Congress for Community Economic Development", "ccc", 7, 4,
+				"1977", "Published: Opportunities for Abuse: Private Profits, Public Loses and the Mortgage Banking Industry", "ccc", 8, 4,
+				"1977", "First personal computer released for retail sale", "culture", 9, 4,
+				"1977", "Television miniseries Roots airs to critical acclaim", "culture", 10, 4,
+				"1978", "CCC launches Rural Coalition", "ccc", 11, 4,
+				"1978", "National Citizens’ Monitoring Project on Community Development Block Grants established", "ccc", 12, 4,
+				"1978", "CCC helps community groups won $21 million in housing loans for low-income communities", "ccc", 13, 4,
+				"1979", "CCC organizes Indian and Native American Employment and Training Coalition", "ccc", 14, 4,
+				"1980", "United States Refugee Act established", "policy", 15, 4,
+				"1980", "President Ronald Reagan elected", "electoral", 16, 4,
+				"1981", "Reagan administration overhauls tax codes and cuts budget for public and subsidized housing by half", "policy", 17, 4,
+				"1981", "Published: Runaway Mortgages: A Review of the Early Experiences with Unrestricted Adjustable Rate Mortgages", "ccc", 18, 4,
+				"1981", "Sandra Day O’Connor becomes first woman appointed to the U.S. Supreme Court", "politics", 1, 5,
+				"1981", "AIDS epidemic officially recognized in the U.S.", "culture", 2, 5,
+				"1982", "Women’s Technical Assistance Project begins as project of CCC", "ccc", 3, 5,
+				"1983", "CCC first receives support from individual donors", "ccc", 4, 5,
+				"1983", "More than 11 million Americans are unemployed, highest rate since 1940", "economy", 5, 5,
+				"1983", "CCC purchases historic headquarters building in Georgetown area of Washington, DC", "ccc", 6, 5,
+				"1984", "President Ronald Reagan wins re-election", "electoral", 7, 5,
+				"1985", "As a result of steep federal funding cuts, CCC reduces number of community groups assisted from 65 to 50", "ccc", 8, 5,
+				"1986", "Housing Trust Fund Project launched by CCC", "ccc", 9, 5,
+				"1987", "Stock market crashes", "economy", 10, 5,
+				"1988", "President George H.W. Bush elected", "electoral", 11, 5,
+				"1989", "President Bush declares a \"War on Drugs\"", "policy", 12, 5,
+				"1989", "Berlin Wall comes down", "world", 13, 5,
+				"1989", "Savings and loan bailout bill includes provisions to promote affordable housing, advocated by CCC", "ccc", 14, 5,
+				"1990", "First Gulf War begins", "world", 15, 5,
+				"1990", "CCC’s Public Housing Initiative helps local groups save 5,200 low-income housing units from demolition", "ccc", 16, 5,
+				"1990", "By 1990, CCC has sponsored more than 140 special projects to advance a broad range of issues to improve the lives of low-income people", "ccc", 17, 5,
+				"1991", "Cold War ends", "world", 18, 5,
+				"1991", "Rodney King brutally beaten by four white police officers in LA", "race", 1, 6,
+				"1992", "Riots tear through LA for five days after officers are acquitted in Rodney King case", "race", 2, 6,
+				"1993", "President Bill Clinton elected", "electoral", 3, 6,
+				"1993", "CCC launches four-year grassroots leadership program", "ccc", 4, 6,
+				"1994", "CCC hires first Public Policy Director, Deepak Bhargava, who would later become its president", "ccc", 5, 6,
+				"1995", "CCC now provides assistance to 200 community organizations and coalitions in 48 states", "ccc", 6, 6,
+				"1996", "President Bill Clinton wins re-election", "electoral", 7, 6,
+				"1996", "Welfare Reform Act passed", "policy", 8, 6,
+				"1997", "Temporary Assistance for Needy Families (TANF) established", "policy", 9, 6,
+				"1997", "CCC and allies launch multi-million-dollar grants pool to finance the efforts of low-income grassroots organizations working on welfare reform in their states", "ccc", 10, 6,
+				"1997", "CCC launches Transportation Equity Network (TEN) in partnership with community organizations", "ccc", 11, 6,
+				"1998", "Housing trust funds have invested $1.5 billion in building and preserving almost 200,000 housing units for low-income families ", "208.9804", 12, 6,
+				"1998", "Transportation Equity Act for the 21st Century enacted, including four TEN policy proposals", "policy", 13, 6,
+				"1998", "National Campaign for Jobs and Income Support (National Campaign) established to help shape future TANF re-authorization", "campaign", 14, 6,
+				"1998", "Andy Mott succeeds Pablo Eisenberg as executive director of CCC", "ccc", 15, 6,
+				"1999", "President Clinton is tried for impeachment and acquitted ", "electoral", 16, 6,
+				"1999", "The world prepares for the new millennium amid fears of an impending so-called Y2K technological disaster", "world", 17, 6,
+				"2000", "President George W. Bush elected", "electoral", 18, 6,
+				"2000", "National Campaign for Jobs and Income Support now operates in dozens of states and raises almost $3 million annually", "ccc", 1, 7,
+				"2001", "Iraq War begins", "world", 2, 7,
+				"2001", "National Campaign officially launches in Chicago, with an expanded scope of advocacy work to include living wage initiatives, Medicaid expansion, and more.", "ccc", 3, 7,
+				"2001", "More than 150 housing trust funds are in operation in the U.S.", "ccc", 4, 7,
+				"2002", "Published: Risk or Race?", "ccc", 5, 7,
+				"2002", "Department of Homeland Security created in response to 9/11 attacks", "policy", 6, 7,
+				"2002", "Deepak Bhargava becomes president of CCC", "ccc", 7, 7,
+				"2002", "CCC shifts direction from providing technical assistance to building social movements", "ccc", 8, 7,
+				"2003", "CCC partners with 53 organizations in 26 states to launch the Community Voting Project", "ccc", 9, 7,
+				"2003", "CCC establishes The Campaign for Community Change - now Center for Community Change Action (CCCA) - a 501(c)(4) sister organization", "ccc", 10, 7,
+				"2004", "CCC launches and staffs Fair Immigration Reform Movement (FIRM)", "ccc", 11, 7,
+				"2004", "CCC’s Community Voting Project mobilizes over 275,000 new and infrequent voters for the 2004 election", "ccc", 12, 7,
+				"2004", "Facebook launches as an obscure online social network for college students", "ccc", 13, 7,
+				"2005", "CCC convenes first-ever national gathering of worker center", "ccc", 14, 7,
+				"2005", "Hurricane Katrina devastates the Gulf Coast, with low-income communities being hit the hardest", "climate", 15, 7,
+				"2005", "CCC sells its Georgetown building and buys a new headquarters building on historic U Street", "ccc", 16, 7,
+				"2006", "FIRM and CCC play key roles in preventing the deportation of high school student Marie Gonzales – the first national DREAMer campaign", "ccc", 17, 7,
+				"2006", "FIRM participates in massive national immigrant mobilization", "ccc", 18, 7,
+				"2006", "CCC pilots Generation Change internship program", "ccc", 1, 8,
+				"2006", "Twitter’s founder sends the first tweet on fledgling social network", "tech", 2, 8,
+				"2007", "Great Recession begins, due in large part to sub-prime mortgage", "economy", 3, 8,
+				"2007", "CCC brings together presidential candidates Clinton, Obama, Edwards, Dodd, and Kucinich to answer questions directly from low-income people", "ccc", 4, 8,
+				"2007", "Work by CCC and FIRM garners more than 736 media stories", "ccc", 5, 8, 
+				"2008", "President Barack Obama elected", "electoral", 6, 8,
+				"2008", "CCC and ally organizations launch Health Care for America Now, national coalition to win changes in health care policy", "ccc", 7, 8,
+				"2009", "Campaign for Community Change and allies launch Reform Immigration for America", "ccc", 8, 8,
+				"2010", "Citizens United v. Federal Election Commission Supreme Court ruling", "policy", 9, 8,
+				"2010", "Landmark health care bill, Patient Protection and Affordable Care Act (ACA) signed into law", "policy", 10, 8,
+				"2010", "CCC, FIRM, and allies conduct March for America, bringing some 250,000 people from 40 states to the National Mall in DC", "ccc", 11, 8,
+				"2010", "Campaign for Community Change mobilizes Latino voters, contributing to \“Latino firewall\” credited with keeping Senate in Democratic hands", "ccc", 12, 8,
+				"2011", "Arab Spring protest scross the Middle East and North Africa", "world", 13, 8,
+				"2011", "Consumer Financial Protection Bureau (CFPB) created", "policy", 14, 8,
+				
+				"2011", "CCC and FIRM launch the national Change Takes Courage campaign", "ccc", 15, 8,
+
+				"2012", "President Barack Obama wins re-election", "electoral", 16, 8,
+
+				"2012", "CCC launches MHAction, focused on low-income seniors residing in manufactured homes in rural communities", "ccc", 17, 8,
+
+				"2012", "Deferred Action for Childhood Arrivals (DACA) is established by executive order", "ccc", 18, 8,
+
+				"2012", "17 year-old Trayvon Martin is shot and killed by an overzealous neighborhood watch member", "ccc", 1, 9,
+
+				"2013", "CCC arranges for leaders from FIRM groups, including DREAMers, to meet with President Obama in the Oval Office", "ccc", 1, 9,
+
+				"2013", "46.5 million Americans are living in poverty", "class", 2, 9, 
+			
+				"2013", "Enrollment begins in ACA online health insurance exchanges", "policy", 3, 9,
+
+				"2013", "#BlackLivesMatter trends on Twitter following an acquittal in the shooting of Trayvon Martin", "race", 4, 9,  
+
+				"2014", "CCC launches multi-year anti-poverty project with focus on creation of good jobs in neglected communities of color", "ccc", 4, 9,
+
+				"2014", "The opioid epidemic begins, hitting rural and low-income communities hardest", "culture", 4, 9,
+				
+				"2014", "12 year-old Tamir Rice is shot and killed by police while", "race", 5, 9,
+
+				"2014", "Obamacare officially goes into effect", "policy", 6, 9,
+
+				"2014", "Reform Immigration for America, now the digital organizing arm of the immigrant rights movement, has generated more than 2.87 million messages to Congress", "ccc", 7, 9,
+
+				"2014", "Unprecedented numbers of women and children fleeing violence in Central America cross the border into the U.S.", "world", 8, 9,
+
+				"2014", "Merriam-Webster dictionary declares \“culture\” its word of the year, adds \“selfie,\” “\hashtag,\” “\big data\” to print editions", "culture", 9, 9,
+
+				"2015", "CCC helps partner groups win thousands of jobs and millions of dollars in investment in low-income communities of color", "ccc", 10, 9,
+
+				"2016", "35 housing trust fund campaigns win more than $400 million for affordable housing", "ccc", 11, 9,
+
+				"2015", "DACA and DAPA (for parents of DREAMers and U.S. citizen children) held up by court action, leaving millions of immigrant families in limbo", "immigration", 12, 9,
+				"2015", "CCC transfers ownership of headquarters building to sister organization, Center for Community Change Action", "ccc", 13, 9,
+				"2015", "CCC launches Communications Fellow program to develop and uplift the stories and voices of real people impacted by economic justice issues", "ccc", 14, 9,
+				"2015", "Protestors and police clash in Baltimore following the forceful arrest and death of Freddie Gray, leading to the establishment of the Movement for Black Lives", "race", 15, 9,
+				"2015", "Former CCC board member Dorian Warren becomes President of CCCA", "ccc,", 16, 9,
+				"2015", "FIRM hosts a summit and presidential candidate forum featuring Bernie Sanders and Martin O’Malley in Las Vegas", "ccc", 17, 9,
+
+				"2016", "CCC convenes Real Solutions for Real People forum on economic, racial, and environmental justice in Des Moines, IA featuring presidential candidates", "ccc", 18, 9,
+				"2016", "DREAMer and immigration activist Astrid Silva addresses the DNC", "immigration", 1, 10,
+				"2016", "President Donald Trump elected", "electoral", 2, 10,
+
+				"2017", "Women’s March is the largest single-day protest in U.S. history", "world", 3, 10,
+				"2017" , "Protests erupt in airports across the U.S. following Trump administration travel bans of Muslim countries", "policy", 4, 10,
+
+				"2017", "Published: Messaging this Moment: A Handbook for Progressive Communicators", "ccc", 5, 10,
+				"2017", "CCC launches Reinvestment Campaign to secure community-controlled funds for sustainable job development and economic stimulation in areas of concentrated poverty from decades of racialized divestment", "ccc", 6, 10,
+
+				"2017", "CCC, FIRM, and allies organize nationwide May 1st Rise Up marches, rallies, protests, and town halls in resistance to the Trump administration’s anti-immigrant agenda", "ccc", 7, 10,
+				"2017", "CCC’s Safety Net Campaign successfully organizes against efforts to repeal ACA and restrict Medicaid", "ccc", 8, 10,
+				"2017", "Published: It’s Not You, It’s the Internet: Navigating the Changing Landscape of Communications and Organizing", "ccc", 9, 10,
+				"2017", "DACA is rescinded by President Trump", "immigration", 10, 10,
+				"2017", "CCC hires Leadership Program Director to head partnerships and leadership development for women of color", "ccc", 11, 10,
+
+				"2018", "CCC celebrates 50th anniversary", "ccc", 11, 10,
+				"2018", "Change Wire launches as a platform for progressive storytelling", "ccc", 12, 10,
+				"2018", "CCC has now incubated over 30 new social, economic, and racial justice organizations", "ccc", 13, 10,
+				"2018", "50th Anniversary Change Champions", "ccc", 14, 10,
 			];
 
 			var camera, scene, renderer;
@@ -277,20 +366,8 @@
 
 					var details = document.createElement( 'div' );
 					details.className = 'details';
-					details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
+					details.innerHTML = table[ i + 1 ] + '<br><span class="details-post-category">' + table[ i + 2 ] + '</span>';
 					element.appendChild( details );
-
-					// url hyperlink option here
-
-					// url popup window on click here
-					var popup = document.createElement( 'div' );
-					popup.style.position = 'absolute';
-					popup.style.top = '10px';
-					popup.style.width = '100%';
-					popup.style.textAlign = 'center';
-					popup.innerHTML = '<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - interactive cubes';
-					element.appendChild( popup );
-
 
 					var object = new THREE.CSS3DObject( element );
 					object.position.x = Math.random() * 4000 - 2000;
@@ -389,6 +466,17 @@
 				controls.maxDistance = 6000;
 				controls.addEventListener( 'change', render );
 
+
+				// event listener for popup box
+
+				// var popup = document.createElement( 'div' );
+				// popup.style.position = 'absolute';
+				// popup.style.top = '10px';
+				// popup.style.width = '100%';
+				// popup.style.textAlign = 'center';
+				// popup.innerHTML = '<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - interactive cubes';
+				// element.appendChild( popup );
+
 				var button = document.getElementById( 'table' );
 				button.addEventListener( 'click', function ( event ) {
 
@@ -424,6 +512,7 @@
 				window.addEventListener( 'resize', onWindowResize, false );
 
 			}
+
 
 			function transform( targets, duration ) {
 
