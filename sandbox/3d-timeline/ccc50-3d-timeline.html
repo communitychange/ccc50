@@ -32,12 +32,18 @@
 				z-index: 1;
 			}
 
+			#info a {
+				text-decoration: none;
+			}
+
 			#menu {
 				position: absolute;
 				bottom: 20px;
 				width: 100%;
 				text-align: center;
 			}
+
+			#menu p { color :white; }
 
 			.element {
 				width: 140px;
@@ -128,20 +134,20 @@
 
 		<div id="container"></div>
 		<div id="menu">
+			<p style="color: white;"> CHANGE VIEW</p>
 			<button id="table">TABLE</button>
 			<button id="sphere">SPHERE</b19utton>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
 		</div>
 		<div id="info">
-			<a href="http://threejs.org" target="_blank" rel="noopener">Interactive Timeline </a> view all decades here 
-			<a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank" rel="noopener">by AKH</a>.
+			<h1><a href="http://threejs.org" target="_blank" rel="noopener">CCC50 Interactive Timeline </a> </h1>
 		</div>
 
 		<script>
 
-			var table = [
-				"1960", "John F. Kennedy elected", "politics", 1, 2,
+			var table2 = [
+				"1960", "John F. Kennedy elected", "politics", 1, 2, 
 				"1962", "Latino farm workers organized by César Chávez and Dolores Huerta", "labor", 2, 2,
 				"1963", "John F. Kennedy assassinated", "politics", 3, 2,
 				"1964", "Lyndon B. Johnson’s War on Poverty begins", "politics", 4, 2,
@@ -182,7 +188,7 @@
 				"1976", "launches Neighborhood Revitalization Project ", "ccc", 3, 4,
 				"1976", "CCC convenes Working Group for Community Development Forum", "ccc", 4, 4,
 				"1976", "CCC founded the National Committee for Responsive Philanthropy founded", "ccc", 5, 4,
-				"1977", "Community Reinvestment Act (CRA) passed", "policy", 6, 5,
+				"1977", "Community Reinvestment Act (CRA) passed", "policy", 6, 4,
 				"1977", "CCC creates National Congress for Community Economic Development", "ccc", 7, 4,
 				"1977", "Published: Opportunities for Abuse: Private Profits, Public Loses and the Mortgage Banking Industry", "ccc", 8, 4,
 				"1977", "First personal computer released for retail sale", "culture", 9, 4,
@@ -315,9 +321,9 @@
 				"2017" , "Protests erupt in airports across the U.S. following Trump administration travel bans of Muslim countries", "policy", 4, 10,
 
 				"2017", "Published: Messaging this Moment: A Handbook for Progressive Communicators", "ccc", 5, 10,
-				"2017", "CCC launches Reinvestment Campaign to secure community-controlled funds for sustainable job development and economic stimulation in areas of concentrated poverty from decades of racialized divestment", "ccc", 6, 10,
+				"2017", "CCC launches Reinvestment Campaign to secure community-controlled funds for sustainable job development and economic stimulation in areas of concentrated poverty", "ccc", 6, 10,
 
-				"2017", "CCC, FIRM, and allies organize nationwide May 1st Rise Up marches, rallies, protests, and town halls in resistance to the Trump administration’s anti-immigrant agenda", "ccc", 7, 10,
+				"2017", "CCC, FIRM, and allies organize nationwide May 1st Rise Up marches, rallies, protests, and town halls", "ccc", 7, 10,
 				"2017", "CCC’s Safety Net Campaign successfully organizes against efforts to repeal ACA and restrict Medicaid", "ccc", 8, 10,
 				"2017", "Published: It’s Not You, It’s the Internet: Navigating the Changing Landscape of Communications and Organizing", "ccc", 9, 10,
 				"2017", "DACA is rescinded by President Trump", "immigration", 10, 10,
@@ -329,6 +335,171 @@
 				"2018", "50th Anniversary Change Champions", "ccc", 14, 10,
 			];
 
+			var table = [
+				"1960", "John F. Kennedy elected", "politics", 1, 2,  "https://google.com",
+				"1962", "Latino farm workers organized by César Chávez and Dolores Huerta", "labor", 2, 2, "url",
+				"1963", "John F. Kennedy assassinated", "politics", 3, 2, "url",
+				"1964", "Lyndon B. Johnson’s War on Poverty begins", "politics", 4, 2, "url",
+				"1964", "Harlem Riots", "race", 5, 2, "url",
+				"1964", "Civil Rights Act", "policy", 6, 2, "url",
+				"1965", "Voting Rights Act passed", "policy", 7, 2, "url",
+				"1965", "Housing and Urban Development Act passed", "policy", 8, 2, "url",
+				"1965", "Citizens’ Crusade Against Poverty", "ccc", 9, 2, "url",
+				"1965", "Watts riots", "race", 10, 2, "url",
+				"1966", "Community Development Corporations (CDCs) devised", "ccc", 11, 2, "url",
+				"1967", "Kerner Commission", "race", 12, 2, "url",
+				"1968", "Martin Luther King Jr. assassinated", "race", 13, 2, "url",
+				"1968", "Senator Robert Kennedy assassinated", "electoral", 14, 2, "url",
+				"1968", "DNC protest in Chicago", "30.973762", 15, 2, "url",
+				"1968", "RFK Memorial Foundation starts CCC", "ccc", 16, 2, "url",
+				"1968", "President Richard Nixon elected", "electoral", 17, 2, "url",
+				"1968", "Published: Hunger USA", "ccc", 18, 2, "url",
+				"1968", "American Indian Movement begins", "race", 1, 3, "url",
+				"1969", "Apollo 11 lands on the moon", "culture", 2, 3, "url",
+				"1970", "CCC started and housed the Agribusiness Accountability Project", "ccc", 3, 3, "url",
+				"1971", "CCC helps community organizations raise more than $3 million", "ccc", 4, 3, "url",
+				"1971", "Co-authored: National Survey of Housing Abandonment", "ccc", 5, 3, "url",
+				"1972", "Number of community groups assisted by CCC grows from 6 in 1968 to 21", "ccc", 6, 3, "url",
+				"1972", "Watergate investigation begins", "politics", 7, 3, "url",
+				"1972", "President Richard Nixon wins re-election", "electoral", 8, 3, "url",
+				"1972", "CCC supports first national conference on housing and finance", "ccc", 9, 3, "url",
+				"1972", "CCC sponsors Voting Rights Litigation Project", "ccc", 10, 3, "url",
+				"1973", "2nd Nixon administration issues severe funding cuts to social and anti-poverty programs", "policy", 11, 3, "url",
+				"1973", "CCC collaborates on National Revenue Sharing Project", "ccc", 12, 3, "url",
+				"1973", "Roe v. Wade Supreme Court ruling overturns state laws against abortion", "policy", 13, 3, "url",
+				"1974", "CCC organizes The Citizen’s Energy Conference", "ccc", 14, 3, "url",
+				"1974", "Gerald Ford becomes President following Nixon resignation", "ccc", 15, 3, "url",
+				"1975", "End of Vietnam War", "world", 16, 3, "url",
+				"1975", "Community Development Block Grant Program created", "ccc", 17, 3, "url",
+				"1975", "Pablo Eisenberg becomes president of CCC", "ccc", 18, 3, "url",
+				"1976", "Publication: General Revenue Sharing: Influencing Local Budgets", "ccc", 1, 4, "url",
+				"1976", "President Jimmy Carter elected", "electoral", 2, 4, "url",
+				"1976", "launches Neighborhood Revitalization Project ", "ccc", 3, 4, "url",
+				"1976", "CCC convenes Working Group for Community Development Forum", "ccc", 4, 4, "url",
+				"1976", "CCC founded the National Committee for Responsive Philanthropy founded", "ccc", 5, 4, "url",
+				"1977", "Community Reinvestment Act (CRA) passed", "policy", 6, 4, "url",
+				"1977", "CCC creates National Congress for Community Economic Development", "ccc", 7, 4, "url",
+				"1977", "Published: Opportunities for Abuse: Private Profits, Public Loses and the Mortgage Banking Industry", "ccc", 8, 4, "url",
+				"1977", "First personal computer released for retail sale", "culture", 9, 4, "url",
+				"1977", "Television miniseries Roots airs to critical acclaim", "culture", 10, 4, "url",
+				"1978", "CCC launches Rural Coalition", "ccc", 11, 4, "url",
+				"1978", "National Citizens’ Monitoring Project on Community Development Block Grants established", "ccc", 12, 4, "url",
+				"1978", "CCC helps community groups won $21 million in housing loans for low-income communities", "ccc", 13, 4, "url",
+				"1979", "CCC organizes Indian and Native American Employment and Training Coalition", "ccc", 14, 4, "url",
+				"1980", "United States Refugee Act established", "policy", 15, 4, "url",
+				"1980", "President Ronald Reagan elected", "electoral", 16, 4, "url",
+				"1981", "Reagan administration overhauls tax codes and cuts budget for public and subsidized housing by half", "policy", 17, 4, "url",
+				"1981", "Published: Runaway Mortgages: A Review of the Early Experiences with Unrestricted Adjustable Rate Mortgages", "ccc", 18, 4, "url",
+				"1981", "Sandra Day O’Connor becomes first woman appointed to the U.S. Supreme Court", "politics", 1, 5, "url",
+				"1981", "AIDS epidemic officially recognized in the U.S.", "culture", 2, 5, "url",
+				"1982", "Women’s Technical Assistance Project begins as project of CCC", "ccc", 3, 5, "url",
+				"1983", "CCC first receives support from individual donors", "ccc", 4, 5, "url",
+				"1983", "More than 11 million Americans are unemployed, highest rate since 1940", "economy", 5, 5, "url",
+				"1983", "CCC purchases historic headquarters building in Georgetown area of Washington, DC", "ccc", 6, 5, "url",
+				"1984", "President Ronald Reagan wins re-election", "electoral", 7, 5, "url",
+				"1985", "As a result of steep federal funding cuts, CCC reduces number of community groups assisted from 65 to 50", "ccc", 8, 5, "url",
+				"1986", "Housing Trust Fund Project launched by CCC", "ccc", 9, 5, "url",
+				"1987", "Stock market crashes", "economy", 10, 5, "url",
+				"1988", "President George H.W. Bush elected", "electoral", 11, 5, "url",
+				"1989", "President Bush declares a \"War on Drugs\"", "policy", 12, 5, "url",
+				"1989", "Berlin Wall comes down", "world", 13, 5, "url",
+				"1989", "Savings and loan bailout bill includes provisions to promote affordable housing, advocated by CCC", "ccc", 14, 5, "url",
+				"1990", "First Gulf War begins", "world", 15, 5, "url",
+				"1990", "CCC’s Public Housing Initiative helps local groups save 5,200 low-income housing units from demolition", "ccc", 16, 5, "url",
+				"1990", "By 1990, CCC has sponsored more than 140 special projects to advance a broad range of issues to improve the lives of low-income people", "ccc", 17, 5, "url",
+				"1991", "Cold War ends", "world", 18, 5, "url",
+				"1991", "Rodney King brutally beaten by four white police officers in LA", "race", 1, 6, "url",
+				"1992", "Riots tear through LA for five days after officers are acquitted in Rodney King case", "race", 2, 6, "url",
+				"1993", "President Bill Clinton elected", "electoral", 3, 6, "url",
+				"1993", "CCC launches four-year grassroots leadership program", "ccc", 4, 6, "url",
+				"1994", "CCC hires first Public Policy Director, Deepak Bhargava, who would later become its president", "ccc", 5, 6, "url",
+				"1995", "CCC now provides assistance to 200 community organizations and coalitions in 48 states", "ccc", 6, 6, "url",
+				"1996", "President Bill Clinton wins re-election", "electoral", 7, 6, "url",
+				"1996", "Welfare Reform Act passed", "policy", 8, 6, "url",
+				"1997", "Temporary Assistance for Needy Families (TANF) established", "policy", 9, 6, "url",
+				"1997", "CCC and allies launch multi-million-dollar grants pool to finance the efforts of low-income grassroots organizations working on welfare reform in their states", "ccc", 10, 6, "url",
+				"1997", "CCC launches Transportation Equity Network (TEN) in partnership with community organizations", "ccc", 11, 6, "url",
+				"1998", "Housing trust funds have invested $1.5 billion in building and preserving almost 200,000 housing units for low-income families ", "208.9804", 12, 6, "url",
+				"1998", "Transportation Equity Act for the 21st Century enacted, including four TEN policy proposals", "policy", 13, 6, "url",
+				"1998", "National Campaign for Jobs and Income Support (National Campaign) established to help shape future TANF re-authorization", "campaign", 14, 6, "url",
+				"1998", "Andy Mott succeeds Pablo Eisenberg as executive director of CCC", "ccc", 15, 6, "url",
+				"1999", "President Clinton is tried for impeachment and acquitted ", "electoral", 16, 6, "url",
+				"1999", "The world prepares for the new millennium amid fears of an impending so-called Y2K technological disaster", "world", 17, 6, "url",
+				"2000", "President George W. Bush elected", "electoral", 18, 6, "url",
+				"2000", "National Campaign for Jobs and Income Support now operates in dozens of states and raises almost $3 million annually", "ccc", 1, 7, "url",
+				"2001", "Iraq War begins", "world", 2, 7, "url",
+				"2001", "National Campaign officially launches in Chicago, with an expanded scope of advocacy work to include living wage initiatives, Medicaid expansion, and more.", "ccc", 3, 7, "url",
+				"2001", "More than 150 housing trust funds are in operation in the U.S.", "ccc", 4, 7, "url",
+				"2002", "Published: Risk or Race?", "ccc", 5, 7, "url",
+				"2002", "Department of Homeland Security created in response to 9/11 attacks", "policy", 6, 7, "url",
+				"2002", "Deepak Bhargava becomes president of CCC", "ccc", 7, 7, "url",
+				"2002", "CCC shifts direction from providing technical assistance to building social movements", "ccc", 8, 7, "url",
+				"2003", "CCC partners with 53 organizations in 26 states to launch the Community Voting Project", "ccc", 9, 7, "url",
+				"2003", "CCC establishes The Campaign for Community Change - now Center for Community Change Action (CCCA) - a 501(c)(4) sister organization", "ccc", 10, 7, "url",
+				"2004", "CCC launches and staffs Fair Immigration Reform Movement (FIRM)", "ccc", 11, 7, "url",
+				"2004", "CCC’s Community Voting Project mobilizes over 275,000 new and infrequent voters for the 2004 election", "ccc", 12, 7, "url",
+				"2004", "Facebook launches as an obscure online social network for college students", "ccc", 13, 7, "url",
+				"2005", "CCC convenes first-ever national gathering of worker center", "ccc", 14, 7, "url",
+				"2005", "Hurricane Katrina devastates the Gulf Coast, with low-income communities being hit the hardest", "climate", 15, 7, "url",
+				"2005", "CCC sells its Georgetown building and buys a new headquarters building on historic U Street", "ccc", 16, 7, "url",
+				"2006", "FIRM and CCC play key roles in preventing the deportation of high school student Marie Gonzales – the first national DREAMer campaign", "ccc", 17, 7, "url",
+				"2006", "FIRM participates in massive national immigrant mobilization", "ccc", 18, 7, "url",
+				"2006", "CCC pilots Generation Change internship program", "ccc", 1, 8, "url",
+				"2006", "Twitter’s founder sends the first tweet on fledgling social network", "tech", 2, 8, "url",
+				"2007", "Great Recession begins, due in large part to sub-prime mortgage", "economy", 3, 8, "url",
+				"2007", "CCC brings together presidential candidates Clinton, Obama, Edwards, Dodd, and Kucinich to answer questions directly from low-income people", "ccc", 4, 8, "url",
+				"2007", "Work by CCC and FIRM garners more than 736 media stories", "ccc", 5, 8,  "url",
+				"2008", "President Barack Obama elected", "electoral", 6, 8, "url",
+				"2008", "CCC and ally organizations launch Health Care for America Now, national coalition to win changes in health care policy", "ccc", 7, 8, "url",
+				"2009", "Campaign for Community Change and allies launch Reform Immigration for America", "ccc", 8, 8, "url",
+				"2010", "Citizens United v. Federal Election Commission Supreme Court ruling", "policy", 9, 8, "url",
+				"2010", "Landmark health care bill, Patient Protection and Affordable Care Act (ACA) signed into law", "policy", 10, 8, "url",
+				"2010", "CCC, FIRM, and allies conduct March for America, bringing some 250,000 people from 40 states to the National Mall in DC", "ccc", 11, 8, "url",
+				"2010", "Campaign for Community Change mobilizes Latino voters, contributing to \“Latino firewall\” credited with keeping Senate in Democratic hands", "ccc", 12, 8, "url",
+				"2011", "Arab Spring protest scross the Middle East and North Africa", "world", 13, 8, "url",
+				"2011", "Consumer Financial Protection Bureau (CFPB) created", "policy", 14, 8, "url",				
+				"2011", "CCC and FIRM launch the national Change Takes Courage campaign", "ccc", 15, 8, "url",
+				"2012", "President Barack Obama wins re-election", "electoral", 16, 8, "url",
+				"2012", "CCC launches MHAction, focused on low-income seniors residing in manufactured homes in rural communities", "ccc", 17, 8, "url",
+				"2012", "Deferred Action for Childhood Arrivals (DACA) is established by executive order", "ccc", 18, 8, "url",
+				"2012", "17 year-old Trayvon Martin is shot and killed by an overzealous neighborhood watch member", "ccc", 1, 9, "url",
+				"2013", "CCC arranges for leaders from FIRM groups, including DREAMers, to meet with President Obama in the Oval Office", "ccc", 1, 9, "url",
+				"2013", "46.5 million Americans are living in poverty", "class", 2, 9, 	 "url",
+				"2013", "Enrollment begins in ACA online health insurance exchanges", "policy", 3, 9, "url",
+				"2013", "#BlackLivesMatter trends on Twitter following an acquittal in the shooting of Trayvon Martin", "race", 4, 9,   "url",
+				"2014", "CCC launches multi-year anti-poverty project with focus on creation of good jobs in neglected communities of color", "ccc", 4, 9, "url",
+				"2014", "The opioid epidemic begins, hitting rural and low-income communities hardest", "culture", 4, 9,				 "url",
+				"2014", "12 year-old Tamir Rice is shot and killed by police while", "race", 5, 9, "url",
+				"2014", "Obamacare officially goes into effect", "policy", 6, 9, "url",
+				"2014", "Reform Immigration for America, now the digital organizing arm of the immigrant rights movement, has generated more than 2.87 million messages to Congress", "ccc", 7, 9, "url",
+				"2014", "Unprecedented numbers of women and children fleeing violence in Central America cross the border into the U.S.", "world", 8, 9, "url",
+				"2014", "Merriam-Webster dictionary declares \“culture\” its word of the year, adds \“selfie,\” “\hashtag,\” “\big data\” to print editions", "culture", 9, 9, "url",
+				"2015", "CCC helps partner groups win thousands of jobs and millions of dollars in investment in low-income communities of color", "ccc", 10, 9, "url",
+				"2016", "35 housing trust fund campaigns win more than $400 million for affordable housing", "ccc", 11, 9, "url",
+				"2015", "DACA and DAPA (for parents of DREAMers and U.S. citizen children) held up by court action, leaving millions of immigrant families in limbo", "immigration", 12, 9, "url",
+				"2015", "CCC transfers ownership of headquarters building to sister organization, Center for Community Change Action", "ccc", 13, 9, "url",
+				"2015", "CCC launches Communications Fellow program to develop and uplift the stories and voices of real people impacted by economic justice issues", "ccc", 14, 9, "url",
+				"2015", "Protestors and police clash in Baltimore following the forceful arrest and death of Freddie Gray, leading to the establishment of the Movement for Black Lives", "race", 15, 9, "url",
+				"2015", "Former CCC board member Dorian Warren becomes President of CCCA", "ccc,", 16, 9, "url",
+				"2015", "FIRM hosts a summit and presidential candidate forum featuring Bernie Sanders and Martin O’Malley in Las Vegas", "ccc", 17, 9, "url",
+				"2016", "CCC convenes Real Solutions for Real People forum on economic, racial, and environmental justice in Des Moines, IA featuring presidential candidates", "ccc", 18, 9, "url",
+				"2016", "DREAMer and immigration activist Astrid Silva addresses the DNC", "immigration", 1, 10, "url",
+				"2016", "President Donald Trump elected", "electoral", 2, 10, "url",
+				"2017", "Women’s March is the largest single-day protest in U.S. history", "world", 3, 10, "url",
+				"2017" , "Protests erupt in airports across the U.S. following Trump administration travel bans of Muslim countries", "policy", 4, 10, "url",
+				"2017", "Published: Messaging this Moment: A Handbook for Progressive Communicators", "ccc", 5, 10, "url",
+				"2017", "CCC launches Reinvestment Campaign to secure community-controlled funds for sustainable job development and economic stimulation in areas of concentrated poverty", "ccc", 6, 10, "url",
+				"2017", "CCC, FIRM, and allies organize nationwide May 1st Rise Up marches, rallies, protests, and town halls", "ccc", 7, 10, "url",
+				"2017", "CCC’s Safety Net Campaign successfully organizes against efforts to repeal ACA and restrict Medicaid", "ccc", 8, 10, "url",
+				"2017", "Published: It’s Not You, It’s the Internet: Navigating the Changing Landscape of Communications and Organizing", "ccc", 9, 10, "url",
+				"2017", "DACA is rescinded by President Trump", "immigration", 10, 10, "url",
+				"2017", "CCC hires Leadership Program Director to head partnerships and leadership development for women of color", "ccc", 11, 10, "url",
+				"2018", "CCC celebrates 50th anniversary", "ccc", 11, 10, "url",
+				"2018", "Change Wire launches as a platform for progressive storytelling", "ccc", 12, 10, "url",
+				"2018", "CCC has now incubated over 30 new social, economic, and racial justice organizations", "ccc", 13, 10, "url",
+				"2018", "50th Anniversary Change Champions", "ccc", 14, 10, "url",
+			];
+
 			var camera, scene, renderer;
 			var controls;
 
@@ -337,6 +508,11 @@
 
 			init();
 			animate();
+
+
+			// for (var i = 0; i < tb.length; i+= 4) {
+			// 	tb.splice(i+5,0, "http://example.com");		
+			// }
 
 			function init() {
 
@@ -347,7 +523,7 @@
 
 				// table
 
-				for ( var i = 0; i < table.length; i += 5 ) {
+				for ( var i = 0; i < table.length; i += 6 ) {
 
 					var element = document.createElement( 'div' );
 					element.className = 'element';
@@ -356,7 +532,7 @@
 
 					var number = document.createElement( 'div' );
 					number.className = 'number';
-					number.textContent = (i/5) + 1;
+					number.textContent = (i/6) + 1;
 					element.appendChild( number );
 
 					var symbol = document.createElement( 'div' );
@@ -443,9 +619,9 @@
 
 					var object = new THREE.Object3D();
 
-					object.position.x = ( ( i % 5 ) * 400 ) - 800;
-					object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-					object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+					object.position.x = ( ( i % 6 ) * 400 ) - 800;
+					object.position.y = ( - ( Math.floor( i / 6 ) % 6 ) * 400 ) + 800;
+					object.position.z = ( Math.floor( i / 30 ) ) * 1000 - 2000;
 
 					targets.grid.push( object );
 
